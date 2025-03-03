@@ -12,7 +12,7 @@ interface UserState {
 }
 
 const useUserStoreBase = create<UserState>((set) => ({
-  activeTab : "dashboard",
+  activeTab : "about",
   onlineUsers : [],
   currentUser : {
     id: 'user-' + Math.floor(Math.random() * 10000),
