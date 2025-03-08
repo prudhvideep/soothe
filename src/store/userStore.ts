@@ -3,26 +3,13 @@ import createSelectors from "./createSelectors";
 import User from "@/types/types";
 
 interface UserState {
-  activeTab: string | null;
-  onlineUsers: User[];
-  currentUser: User;
-  setActiveTab : (tab : string) => void;
-  setOnlineUsers : (users : User[]) => void;
-  setCurrentUser : (user : User) => void;
+  currentUser: User | null;
+  setCurrentUser : (user : User | null) => void;
 }
 
 const useUserStoreBase = create<UserState>((set) => ({
-  activeTab : "about",
-  onlineUsers : [],
-  currentUser : {
-    id: 'user-' + Math.floor(Math.random() * 10000),
-    name: 'Medical Student',
-    role: 'Volunteer',
-    isAvailable: true,
-  },
-  setActiveTab : (tab : string) => set({activeTab : tab}),
-  setOnlineUsers : (users ) => set({onlineUsers : users}),
-  setCurrentUser : (user : User) => set({currentUser : user}),
+  currentUser : null,
+  setCurrentUser : (user : User | null) => set({currentUser : user})
 }));
 
 const useUserStore = createSelectors(useUserStoreBase);

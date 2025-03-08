@@ -1,9 +1,7 @@
 type User = {
-  id: string;
-  name: string;
-  role: string;
-  unit?: string;
-  isAvailable: boolean;
+  email : string,
+  type : "patient" | "volunteer" | "nurse",
+  isActive : boolean
 };
 
 
