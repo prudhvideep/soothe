@@ -4,5 +4,7 @@ type User = {
   isActive : boolean
 };
 
+export type Theme =  "light" | "dark";
+export type PatientTabState = "Home" | "About" | "Team" | "Learn";
 
 export default User;
