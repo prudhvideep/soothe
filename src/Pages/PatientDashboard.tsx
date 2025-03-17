@@ -16,7 +16,7 @@ export default function PatientDashboard() {
       } min-h-screen overflow-auto`}
     >
       <Header />
-      <section className="w-full h-80 md:h-120">
+      <section className="w-full h-80 md:h-100">
         <div className="p-4 flex flex-col gap-4 w-full md:max-w-2/3">
           <span
             className={`${
@@ -75,7 +75,7 @@ export default function PatientDashboard() {
           </div>
         </div>
       </section>
-      <section className="mt-10 w-full h-100">
+      <section className=" w-full h-100">
         <div className="p-4 w-full h-full flex flex-col-reverse md:gap-4 items-center md:items-start md:flex-row md:justify-evenly">
           <div className="flex flex-col">
             <span
@@ -88,7 +88,7 @@ export default function PatientDashboard() {
             <p
               className={`${
                 theme === "dark" ? "text-neutral-300" : "text-black"
-              } mt-2 md:mt-2 ml-2 md:ml-10 text-sm md:text-md w-full md:w-1/2 font-sans`}
+              } mt-2 md:mt-4 ml-2 md:ml-10 text-sm md:text-md w-full md:w-1/2 font-sans`}
             >
               Does your unit have an acute need for SOOTHE? No problem! Email us
               at{" "}

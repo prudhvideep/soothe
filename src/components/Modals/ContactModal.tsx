@@ -40,7 +40,7 @@ export default function ContactModal({ isOpen, setIsOpen }: any) {
         <div className="flex-grow"></div>
 
         {/* Buttons at the bottom */}
-        <div className="ml-2 md:ml-10 mt-auto flex flex-row justify-center gap-4">
+        <div className="ml-2 md:ml-10 mt-4 flex flex-row justify-center gap-4">
           <button
             className={`${
               theme === "dark"
