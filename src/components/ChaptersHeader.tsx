@@ -1,20 +1,20 @@
 import { useState } from "react";
 import useThemeStore from "@/store/themeStore";
 import SootheLogo from "../assets/SootheLogo.png";
-import { LogOut, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { To, useNavigate } from "react-router";
 import useUserStore from "@/store/userStore";
-import { PatientTabState } from "@/types/types";
+import { ChapterState } from "@/types/types";
 
-export default function Header() {
+export default function ChaptersHeader() {
   const navigate = useNavigate();
-  const { patientTab, setPatientTab,setChapterTab } = useUserStore();
+  const { chapterTab, setChapterTab } = useUserStore();
   const { theme } = useThemeStore();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigateTo = (path: To, tab: PatientTabState) => {
+  const navigateTo = (path: To, tab: ChapterState) => {
     navigate(path);
-    setPatientTab(tab);
+    setChapterTab(tab);
     setMobileMenuOpen(false);
   };
 
@@ -31,58 +31,44 @@ export default function Header() {
                 ? "hover:bg-neutral-900"
                 : " hover:bg-neutral-200"
             } ${
-              patientTab === "Home" ? "border-b border-blue-600 shadow-lg" : ""
+              chapterTab === "Home" ? "border-b border-blue-600 shadow-lg" : ""
             } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
           >
             Home
           </button>
           <button
-            onClick={() => navigateTo("/about", "About")}
+            onClick={() => navigateTo("/newvolunteers", "New Volunteers")}
             className={`${
               theme === "dark"
                 ? "hover:bg-neutral-900"
                 : " hover:bg-neutral-200"
             } ${
-              patientTab === "About" ? "border-b border-blue-600 shadow-lg" : ""
+              chapterTab === "New Volunteers" ? "border-b border-blue-600 shadow-lg" : ""
             } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
           >
-            About
+            New Volunteers
           </button>
           <button
-            onClick={() => navigateTo("/media", "Media")}
+            onClick={() => navigateTo("/newdepartments", "New Departments")}
             className={`${
               theme === "dark"
                 ? "hover:bg-neutral-900"
                 : " hover:bg-neutral-200"
             } ${
-              patientTab === "Media" ? "border-b border-blue-600 shadow-lg" : ""
+              chapterTab === "New Departments" ? "border-b border-blue-600 shadow-lg" : ""
             } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
           >
-            Media
+            New Departments
           </button>
           <button
-            onClick={() => navigateTo("/team", "Team")}
+            onClick={() => navigateTo("/newchapters", "New Chapters")}
             className={`${
               theme === "dark" ? "hover:bg-neutral-900" : "hover:bg-neutral-200"
             } ${
-              patientTab === "Team" ? "border-b border-blue-600 shadow-lg " : ""
+              chapterTab === "New Chapters" ? "border-b border-blue-600 shadow-lg " : ""
             } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
           >
-            Team
-          </button>
-
-          <button
-            onClick={() => {
-              setChapterTab("New Volunteers")
-              navigateTo("/newvolunteers", "New Volunteers")
-            }}
-            className={`${
-              theme === "dark" ? "hover:bg-neutral-900" : "hover:bg-neutral-200"
-            } ${
-              patientTab === "Get Involved" ? "border-b border-blue-600 shadow-lg " : ""
-            } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer text-blue-800 hover:animate-pulse`}
-          >
-            Get Involved
+            New Chapters
           </button>
         </div>
       </div>
@@ -135,7 +121,7 @@ export default function Header() {
                       ? "hover:bg-neutral-700"
                       : "hover:bg-neutral-200"
                   } ${
-                    patientTab === "Home"
+                    chapterTab === "Home"
                       ? "border-l-4 border-blue-600 pl-3"
                       : "pl-4"
                   } p-2 rounded-md font-semibold hover:cursor-pointer text-left`}
@@ -143,45 +129,49 @@ export default function Header() {
                   Home
                 </button>
                 <button
-                  onClick={() => navigateTo("/about", "About")}
+                  onClick={() => navigateTo("/newvolunteers", "New Volunteers")}
                   className={`${
                     theme === "dark"
                       ? "hover:bg-neutral-700"
                       : "hover:bg-neutral-200"
                   } ${
-                    patientTab === "About"
+                    chapterTab === "New Volunteers"
                       ? "border-l-4 border-blue-600 pl-3"
                       : "pl-4"
                   } p-2 rounded-md font-semibold hover:cursor-pointer text-left`}
                 >
-                  About
+                  New Volunteers
                 </button>
                 <button
-                  onClick={() => navigateTo("/team", "Team")}
+                  onClick={() => navigateTo("/newdepartments", "New Departments")}
                   className={`${
                     theme === "dark"
                       ? "hover:bg-neutral-700"
                       : "hover:bg-neutral-200"
                   } ${
-                    patientTab === "Team"
+                    chapterTab === "New Departments"
                       ? "border-l-4 border-blue-600 pl-3"
                       : "pl-4"
                   } p-2 rounded-md font-semibold hover:cursor-pointer text-left`}
                 >
-                  Team
+                  New Departments
+                </button>
+                <button
+                  onClick={() => navigateTo("/newchapters", "New Chapters")}
+                  className={`${
+                    theme === "dark"
+                      ? "hover:bg-neutral-700"
+                      : "hover:bg-neutral-200"
+                  } ${
+                    chapterTab === "New Departments"
+                      ? "border-l-4 border-blue-600 pl-3"
+                      : "pl-4"
+                  } p-2 rounded-md font-semibold hover:cursor-pointer text-left`}
+                >
+                  New Chapters
                 </button>
 
                 <div className="border-t my-4 border-gray-300 dark:border-gray-700"></div>
-
-                <button
-                  className={`${
-                    theme === "dark"
-                      ? "hover:bg-neutral-700"
-                      : "hover:bg-neutral-200"
-                  } p-2 pl-4 rounded-md font-semibold hover:cursor-pointer text-left flex items-center`}
-                >
-                  <LogOut size={18} className="mr-2" /> Log Out
-                </button>
               </div>
             </div>
           </div>
