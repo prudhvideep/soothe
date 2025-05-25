@@ -145,7 +145,7 @@ function TimelineItem({
             <div className="relative">
               <div
                 className={`w-4 h-4 rounded-full ${
-                  isDark ? "bg-blue-500" : "bg-blue-600"
+                  isDark ? "bg-blue-500" : "bg-[#3b518a]"
                 } z-10 relative`}
               ></div>
               <div
@@ -164,7 +164,7 @@ function TimelineItem({
             <div className="relative">
               <div
                 className={`w-4 h-4 rounded-full ${
-                  isDark ? "bg-blue-500" : "bg-blue-600"
+                  isDark ? "bg-blue-500" : "bg-[#3b518a]"
                 } z-10 relative`}
               ></div>
               <div
@@ -184,7 +184,7 @@ function TimelineItem({
               className={`inline-block rounded-full px-3 py-1 text-sm font-semibold mb-2 ${
                 isDark
                   ? "bg-blue-900 text-blue-300"
-                  : "bg-blue-100 text-blue-800"
+                  : "bg-blue-100 text-[#3b518a]"
               }`}
             >
               {datePart}

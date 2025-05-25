@@ -19,7 +19,7 @@ export default function NewDepartments() {
           <div className="md:w-1/2 space-y-6">
             <h2
               className={`${
-                theme === "dark" ? "text-blue-300" : "text-blue-700"
+                theme === "dark" ? "text-blue-300" : "text-[#3b518a]"
               } text-2xl md:text-4xl font-bold`}
             >
               New Departments
@@ -32,7 +32,7 @@ export default function NewDepartments() {
               We’re always excited to talk to more patients! If your
               department/floor is interested in working with SOOTHE volunteers,
               please reach us via email 
-              {" "}<span className="italic text-blue-700">SOOTHEOrg@jh.edu</span> to
+              {" "}<span className="italic font-medium text-[#3b518a] hover:cursor-pointer hover:underline">SOOTHEOrg@jh.edu</span> to
               coordinate!
             </p>
           </div>

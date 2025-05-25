@@ -21,54 +21,36 @@ export default function ChaptersHeader() {
   return (
     <header className="p-6 flex justify-between items-center relative">
       <div className="w-full flex flex-col gap-4 items-center justify-center">
-        <img src={SootheLogo} alt="Logo" className="w-80 h-40" />
+        <img
+          src={SootheLogo}
+          alt="Logo"
+          className="pl-12 md:pl-8 h-40 md:w-140 md:h-80"
+        />
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-around items-center space-x-4">
+        <div className="hidden md:flex md:flex-row justify-around items-center space-x-4">
           <button
             onClick={() => navigateTo("/", "Home")}
-            className={`${
-              theme === "dark"
-                ? "hover:bg-neutral-900"
-                : " hover:bg-neutral-200"
+            className={`flex items-center gap-2 ${
+              theme === "dark" ? "hover:bg-neutral-900" : "hover:bg-neutral-200"
             } ${
               chapterTab === "Home" ? "border-b border-blue-600 shadow-lg" : ""
             } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
           >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 10l9-7 9 7v10a2 2 0 01-2 2h-4a2 2 0 01-2-2v-4H9v4a2 2 0 01-2 2H3a2 2 0 01-2-2V10z"
+              />
+            </svg>
             Home
-          </button>
-          <button
-            onClick={() => navigateTo("/newvolunteers", "New Volunteers")}
-            className={`${
-              theme === "dark"
-                ? "hover:bg-neutral-900"
-                : " hover:bg-neutral-200"
-            } ${
-              chapterTab === "New Volunteers" ? "border-b border-blue-600 shadow-lg" : ""
-            } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
-          >
-            New Volunteers
-          </button>
-          <button
-            onClick={() => navigateTo("/newdepartments", "New Departments")}
-            className={`${
-              theme === "dark"
-                ? "hover:bg-neutral-900"
-                : " hover:bg-neutral-200"
-            } ${
-              chapterTab === "New Departments" ? "border-b border-blue-600 shadow-lg" : ""
-            } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
-          >
-            New Departments
-          </button>
-          <button
-            onClick={() => navigateTo("/newchapters", "New Chapters")}
-            className={`${
-              theme === "dark" ? "hover:bg-neutral-900" : "hover:bg-neutral-200"
-            } ${
-              chapterTab === "New Chapters" ? "border-b border-blue-600 shadow-lg " : ""
-            } p-2 pl-4 pr-4 rounded-md font-semibold hover:cursor-pointer`}
-          >
-            New Chapters
           </button>
         </div>
       </div>
@@ -143,7 +125,9 @@ export default function ChaptersHeader() {
                   New Volunteers
                 </button>
                 <button
-                  onClick={() => navigateTo("/newdepartments", "New Departments")}
+                  onClick={() =>
+                    navigateTo("/newdepartments", "New Departments")
+                  }
                   className={`${
                     theme === "dark"
                       ? "hover:bg-neutral-700"

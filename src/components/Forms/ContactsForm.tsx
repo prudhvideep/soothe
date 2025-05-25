@@ -10,7 +10,7 @@ export default function ContactPage() {
         isDark ? "bg-black text-white" : "bg-white text-black"
       } min-h-screen`}
     >
-      <div className="container mx-auto py-12 max-w-[90%] md:max-w-[84%]">
+      <div className="p-10 container mx-auto py-12 max-w-[90%] md:max-w-[84%]">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
 
         {/* Contact Info */}
@@ -24,7 +24,7 @@ export default function ContactPage() {
               Email:{" "}
               <a
                 href="mailto:sootheorg@jh.edu"
-                className="text-blue-600 dark:text-blue-400 underline"
+                className="text-blue-600 dark:text-[#3b518a] underline"
               >
                 sootheorg@jh.edu
               </a>
@@ -69,7 +69,7 @@ export default function ContactPage() {
             />
             <button
               type="submit"
-              className="px-6 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
+              className="px-6 py-2 rounded-md bg-[#3b518a] text-white hover:bg-[#889fdb] hover:cursor-pointer transition"
             >
               Submit
             </button>

@@ -19,7 +19,7 @@ export default function NewVolunteers() {
           <div className="md:w-1/2 space-y-6">
             <h2
               className={`${
-                theme === "dark" ? "text-blue-300" : "text-blue-700"
+                theme === "dark" ? "text-blue-300" : "text-[#3b518a]"
               } text-2xl md:text-4xl font-bold`}
             >
               New Volunteers
@@ -31,7 +31,7 @@ export default function NewVolunteers() {
             >
               If you are an incoming or current Hopkins medical student
               interested in volunteer, please email us{" "}
-              <span className="italic text-blue-700">SOOTHEOrg@jh.edu</span> or
+              <span className="italic text-[#3b518a] hover:underline hover:cursor-pointer font-medium">SOOTHEOrg@jh.edu</span> or
               attend our open training sessions. If you are a non-medical
               student, please reach out – we are currently considering
               possibilities for expanding SOOTHE outside of the medical school.

@@ -19,7 +19,7 @@ export default function NewChapters() {
           <div className="md:w-1/2 space-y-6">
             <h2
               className={`${
-                theme === "dark" ? "text-blue-300" : "text-blue-700"
+                theme === "dark" ? "text-blue-300" : "text-[#3b518a]"
               } text-2xl md:text-4xl font-bold`}
             >
               New Chapters
@@ -31,9 +31,11 @@ export default function NewChapters() {
             >
               If your institution or medical school is interested in starting
               your own SOOTHE program, please reach out to us via email{" "}
-              <span className="italic text-blue-700">SOOTHEOrg@jh.edu</span>. We
-              can help you get started with organizing and training your own
-              local SOOTHE chapter!
+              <span className="italic font-medium text-[#3b518a] hover:underline hover:cursor-pointer">
+                SOOTHEOrg@jh.edu
+              </span>
+              . We can help you get started with organizing and training your
+              own local SOOTHE chapter!
             </p>
           </div>
 
